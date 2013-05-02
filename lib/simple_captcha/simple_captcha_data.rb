@@ -1,7 +1,7 @@
 module SimpleCaptcha
   class SimpleCaptchaData < ::ActiveRecord::Base
     def self.rails3?
-      ::ActiveRecord::VERSION::MAJOR == 3
+      ::ActiveRecord::VERSION::MAJOR >= 3 #rails 4 will be include
     end
 
     if rails3?
